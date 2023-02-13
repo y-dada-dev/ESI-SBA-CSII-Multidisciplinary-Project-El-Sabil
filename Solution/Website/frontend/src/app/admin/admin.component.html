@@ -1,0 +1,142 @@
+<app-atop-nav></app-atop-nav>
+<aside class="AsideNavBar">
+  <nav>
+      <div class="WebsiteLogoContainer">
+          <a href="#"><img src=".\..\..\..\assets\home\icons\graduation-cap-solid.svg">El Sabil</a>
+      </div>
+      <hr>
+      <ul>
+          <li>
+              <a [routerLink]="['/admin/teacherList']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/teacherlist"
+                  routerLinkActive #rla10="routerLinkActive"
+                  [ngClass]="rla10.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\TeacherLogoWhite.png">
+                      <span>Enseignants</span>
+                  </button>
+              </a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/etuList']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/etuList"
+                  routerLinkActive #rla20="routerLinkActive"
+                  [ngClass]="rla20.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\StudentLogoWhite.png">
+                      <span>Etudiants</span>
+                  </button>
+              </a>
+          </li>
+      </ul>
+      <hr>
+      <ul>
+
+          <li>
+              <a [routerLink]="['/admin/niveau']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button  routerLink="/admin/niveau"
+                  routerLinkActive #rla4="routerLinkActive"
+                  [ngClass]="rla4.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\LevelLogoWhite.png">
+                      <span>Niveaux</span>
+                  </button>
+              </a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/annee']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/annee"
+                  routerLinkActive #rla5="routerLinkActive"
+                  [ngClass]="rla5.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\YearLogoWhite.png">
+                      <span>Années</span>
+                  </button>
+              </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/admin/anneescholaire']"
+            href="javascript:void(0)" class="NavTabWrapperInactive">
+                <button routerLink="/admin/anneescholaire"
+                routerLinkActive #rla6="routerLinkActive"
+                [ngClass]="rla6.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                    <img src=".\..\..\..\assets\admin\side-nav\YearSchoolLogoWhite.png">
+                    <span>A. Scholaire</span>
+                </button>
+            </a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/group']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/group"
+                  routerLinkActive #rla7="routerLinkActive"
+                  [ngClass]="rla7.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\GroupLogoWhite.png">
+                      <span>Groupes</span>
+                  </button>
+              </a>
+          </li>
+          <li>
+            <a [routerLink]="['/admin/classrooms']"
+            href="javascript:void(0)" class="NavTabWrapperInactive">
+                <button routerLink="/admin/classrooms"
+              routerLinkActive #ms3_1="routerLinkActive"
+              [ngClass]="ms3_1.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                    <img src=".\..\..\..\assets\admin\side-nav\classroom.png">
+                    <span>Salles</span>
+                </button>
+            </a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/course']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/course"
+                  routerLinkActive #rla9="routerLinkActive"
+                  [ngClass]="rla9.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\CourseLogoWhite.png">
+                      <span>Cours</span>
+                  </button>
+              </a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/planning']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/planning"
+                routerLinkActive #ms3_2="routerLinkActive"
+                [ngClass]="ms3_2.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\PlanningLogoWhite.png">
+                      <span>Planning</span>
+                  </button>
+              </a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/absences']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/absences"
+                routerLinkActive #ms3_3="routerLinkActive"
+                [ngClass]="ms3_3.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\absence.png">
+                      <span>Absences</span>
+                  </button>
+              </a>
+          </li>
+      </ul>
+      <hr>
+      <ul>
+          <li>
+              <a [routerLink]="['/admin/events']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/admin/events"
+                routerLinkActive #ms3_4="routerLinkActive"
+                [ngClass]="ms3_4.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\EventLogoWhite.png">
+                      <span>Evénements</span>
+                  </button>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</aside>
+
+<router-outlet></router-outlet>

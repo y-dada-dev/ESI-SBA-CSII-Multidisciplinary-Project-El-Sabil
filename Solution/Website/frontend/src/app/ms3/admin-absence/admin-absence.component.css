@@ -1,0 +1,39 @@
+.select > * {
+    width: 29%;
+    margin-right: 2%;
+    margin-left: 2%;
+    display: inline-block;    
+    min-width: 196px;
+}
+.select > div {
+    margin-top: 10px;
+}
+.select > div label{
+    width: 35%;
+    margin-right: 5%;
+}
+.select > div *{
+    width: 50%;
+}
+/*table*/
+th,td{
+    padding: 16px;
+    text-align: center;
+}
+.sessionControl{
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+td span{
+    cursor: pointer;
+}
+/*modal*/
+.modal-body input,.modal-body select{
+    display: inline-block;
+    width: 67%;
+}
+.modal-body label{
+    width: 33%;
+}

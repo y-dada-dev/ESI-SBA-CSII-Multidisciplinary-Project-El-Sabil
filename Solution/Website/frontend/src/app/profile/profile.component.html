@@ -1,0 +1,69 @@
+<div class="container">
+  <table class="user-details">
+    <tbody>
+      <tr>
+        <th scope="row" colspan="2" class="profile-section">
+          <div class="profile-picture">
+            <img [src]="profilePictureUrl" alt="Profile Picture+ '?timestamp=' + timestamp" class="rounded-circle" width="200px" height="200px">
+          </div>
+          <div class="upload-section">
+            <input type="file" (change)="onFileSelected($event)">
+            <button class="upload-button " (click)="onUpload()">Upload</button>
+          </div>
+          <div class="profile-details">
+            <h2 *ngIf="user">{{ user.nom }}&nbsp;{{user.prenom }}</h2>
+            <small class="address" *ngIf="user">{{user.adresse.wilaya}}</small>
+            <div class="password-section">
+              <button class="change-password" (click)="modifiermotpasse()">Changer le mot de passe</button>
+            </div>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th scope="row" class="field">Nom Complet</th>
+        <td class="value">{{user.nom}}&nbsp;{{user.prenom}}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="field">Email</th>
+        <td class="value">{{user.email}}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="field">Telephone</th>
+        <td class="value">
+          <span>{{ user.numeroTelephone }}</span>
+          <div *ngIf="editingPhone" class="edit-section">
+            <input type="text" [(ngModel)]="newPhone">
+            <button (click)="cancelPhone()" class="cancel-button">Cancel</button>
+            <button (click)="savePhone()" class="save-button">Update</button>
+          </div>
+          <button *ngIf="!editingPhone" (click)="editPhone()" class="edit-button">Edit</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="field">Adresse,ville</th>
+        <td class="value">
+          <span *ngIf="!editingAddress">{{ user.adresse.wilaya }}&nbsp;&nbsp;{{ user.adresse.ville }}&nbsp;&nbsp;{{ user.adresse.rue }}</span>
+          <div *ngIf="editingAddress" class="edit-section">
+            <input type="text" [(ngModel)]="newAddress.rue">
+            <input type="text" [(ngModel)]="newAddress.ville">
+            <input type="text" [(ngModel)]="newAddress.wilaya">
+            <button (click)="cancelAddress()" class="cancel-button">Cancel</button>
+            <button (click)="saveAddress()" class="save-button">Update</button>
+          </div>
+          <button *ngIf="!editingAddress" (click)="editAddress()" class="edit-button">Edit</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="field">Date de naissance</th>
+        <td class="value">{{user.datenaissance}}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="field">Role</th>
+        <td class="value">{{user.role}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="logout-section">
+    <button class="logout-button">Déconnecter</button>
+  </div>
+</div>

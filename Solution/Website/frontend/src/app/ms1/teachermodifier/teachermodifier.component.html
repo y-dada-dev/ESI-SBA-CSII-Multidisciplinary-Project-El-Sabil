@@ -1,0 +1,71 @@
+<div class="AllWrapper">
+  <div class="TableWrapper">
+
+<form (submit)="modifierEtudiant()" #form="ngForm" *ngIf="etudiant">
+
+  <div>
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" [(ngModel)]="etudiant.nom" required>
+  </div>
+
+  <div>
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom" [(ngModel)]="etudiant.prenom" required>
+  </div>
+
+  <div>
+    <label for="dateNaissance">Date de naissance</label>
+    <input type="date" id="dateNaissance" name="dateNaissance" [(ngModel)]="selecteddate" required>
+  </div>
+
+  <div>
+    <label for="adresse">wilaya:</label>
+    <input type="text" id="adresse" [(ngModel)]="adresseWilaya" name="wilaya" required>
+  </div>
+  <div>
+    <label for="ville">Ville:</label>
+    <input type="text" id="ville" [(ngModel)]="adresseVille" name="ville" required>
+  </div>
+
+  <div>
+    <label for="rue">Rue:</label>
+    <input type="text" id="rue" [(ngModel)]="adresseRue" name="rue" required>
+  </div>
+
+  <div>
+    <label for="numeroTelephone">Numéro de téléphone</label>
+    <input type="text" id="numeroTelephone" name="numeroTelephone" [(ngModel)]="etudiant.numeroTelephone" required>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="etudiant.email" required>
+  </div>
+
+  <div>
+    <label for="niveau">Niveau:</label>
+    <select id="niveau" [(ngModel)]="selectedNiveau" name="niveau" (change)="getAnnees()" required>
+      <option *ngFor="let niveau of niveaux" [ngValue]="niveau" [selected]="niveau.niveauNom === etudiant.niveau">{{ niveau.niveauNom }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="annee">Année:</label>
+    <select id="annee" [(ngModel)]="selectedAnnee" name="annee"  required>
+      <option *ngFor="let annee of annees" [ngValue]="annee" [selected]="annee.anneeNom === etudiant.annee">{{ annee.anneeNom }}</option>
+    </select>
+  </div>
+
+
+  <div>
+    <label for="active">Actif:</label>
+    <select id="active" [(ngModel)]="selectedactif" name="active" required>
+      <option value="true">true</option>
+      <option value="false" >false</option>
+    </select>
+  </div>
+
+<div></div>
+  <button class="CancelBtn" [routerLink]="['/admin/teacherList']">Annuler</button>
+  <button class="SaveBtn" type="submit">Modifier</button>
+</form></div></div>

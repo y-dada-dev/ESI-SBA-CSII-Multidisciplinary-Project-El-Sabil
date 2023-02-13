@@ -1,0 +1,89 @@
+<div class="AllWrapper">
+  <div class="TableWrapper">
+
+<form (submit)="ajouterEtudiant()">
+  <div>
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" [(ngModel)]="nouvelEtudiant.nom" name="nom" required>
+  </div>
+
+  <div>
+    <label for="prenom">Prénom:</label>
+    <input type="text" id="prenom" [(ngModel)]="nouvelEtudiant.prenom" name="prenom" required>
+  </div>
+
+  <div>
+    <label for="dateNaissance">Date de naissance:</label>
+    <input type="date" id="dateNaissance" [(ngModel)]="nouvelEtudiant.dateNaissance" name="dateNaissance" required>
+  </div>
+
+  
+  <div>
+    <label for="adresse">wilaya:</label>
+    <input type="text" id="adresse" [(ngModel)]="adresseWilaya" name="wilaya" required>
+  </div>
+  <div>
+    <label for="ville">Ville:</label>
+    <input type="text" id="ville" [(ngModel)]="adresseVille" name="ville" required>
+  </div>
+
+  <div>
+    <label for="rue">Rue:</label>
+    <input type="text" id="rue" [(ngModel)]="adresseRue" name="rue" required>
+  </div>
+
+  <div>
+    <label for="numeroTelephone">Numéro de téléphone:</label>
+    <input type="tel" id="numeroTelephone" [(ngModel)]="nouvelEtudiant.numeroTelephone" name="numeroTelephone" required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="nouvelEtudiant.email" name="email" required>
+  </div>
+
+  <div>
+    <label for="motDePasse">Mot de passe:</label>
+    <input type="password" id="motDePasse" [(ngModel)]="nouvelEtudiant.motDePasse" name="motDePasse" required>
+  </div>
+  <div>
+    <label for="role">Role:</label>
+    <select id="role" [(ngModel)]="nouvelEtudiant.role" name="role" required>
+      <option value="enseignant">teacher</option>
+
+    </select>
+  </div>
+  <div>
+    <label for="role">Niveau:</label>
+  <select id="niveau" [(ngModel)]="selectedNiveau" name="niveau" (change)="getAnnees()" required>
+    <option *ngFor="let niveau of niveaux" [ngValue]="niveau">{{ niveau.niveauNom }}</option>
+  </select>
+  </div>
+ <div>
+    <label for="annee">Année:</label>
+    <select id="annee" [(ngModel)]="selectedAnnee" name="annee" (change)="getAnnees()" required>
+      <option *ngFor="let annee of annees" [ngValue]="annee">{{ annee.anneeNom }}</option>
+    </select>
+  </div>
+
+
+
+  <div>
+    <label for="active">Actif:</label>
+    <select id="active" [(ngModel)]="nouvelEtudiant.active" name="active" required>
+      <option value="true">true</option>
+      <option value="false">false</option>
+    </select>
+  </div>
+
+
+<div></div>
+
+
+
+
+  <button class="CancelBtn" [routerLink]="['/admin/teacherList']">Annuler</button>
+  <button class="SaveBtn" type="submit">Ajouter</button>
+</form>
+  </div>
+  </div>

@@ -1,0 +1,59 @@
+<app-ttop-nav></app-ttop-nav>
+<aside class="AsideNavBar">
+  <nav>
+      <div class="WebsiteLogoContainer">
+          <a href="#"><img src=".\..\..\..\assets\home\icons\graduation-cap-solid.svg">El Sabil</a>
+      </div>
+      <hr>
+      <ul>
+          <li>
+            <a  [routerLink]="['/teacher/course']"
+            href="javascript:void(0)" class="NavTabWrapperInactive">
+                <button outerLink="/teacher/course"
+                routerLinkActive #test1="routerLinkActive"
+                [ngClass]="test1.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                    <img src=".\..\..\..\assets\admin\side-nav\GroupLogoWhite.png">
+                    <span>Cours</span>
+                </button>
+            </a>
+          </li>
+          <li>
+              <a [routerLink]="['/teacher/tasks']"
+              href="javascript:void(0)" class="NavTabWrapperInactive">
+                  <button routerLink="/teacher/tasks"
+                  routerLinkActive #rla1_2="routerLinkActive"
+                  [ngClass]="rla1_2.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                      <img src=".\..\..\..\assets\admin\side-nav\CourseLogoWhite.png">
+                      <span>Devoir</span>
+                  </button>
+              </a>
+          </li>
+      </ul>
+      <hr>
+      <ul>
+        <li>
+            <a [routerLink]="['/teacher/planning']"
+            href="javascript:void(0)" class="NavTabWrapperInactive">
+                <button routerLink="/teacher/planning"
+                routerLinkActive #ms3_1="routerLinkActive"
+                [ngClass]="ms3_1.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                    <img src=".\..\..\..\assets\admin\side-nav\CourseLogoWhite.png">
+                    <span>Planning</span>
+                </button>
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/teacher/absences']"
+            href="javascript:void(0)" class="NavTabWrapperInactive">
+                <button routerLink="/teacher/absences"
+                routerLinkActive #ms3_2="routerLinkActive"
+                [ngClass]="ms3_2.isActive ? 'NavTabActive' : 'NavTabInactive'">
+                    <img src=".\..\..\..\assets\admin\side-nav\absence.png">
+                    <span>Absences</span>
+                </button>
+            </a>
+        </li>
+      </ul>
+  </nav>
+</aside>
+<router-outlet></router-outlet>

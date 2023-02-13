@@ -1,0 +1,52 @@
+<div class="AllWrapper">
+	<a [routerLink]="['/admin/ajouterEtu']"
+	href="javascript:void(0)" class="Add">
+		<button >
+			<span>Ajouter un Etudiant</span>
+		</button>
+	</a>
+  <div class="TableWrapper">
+
+<table >
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Date de naissance</th>
+    <th>Wilaya</th>
+    <th>Ville</th>
+    <th>Rue</th>
+    <th>Numéro de téléphone</th>
+    <th>Email</th>
+    <th>niveau</th>
+    <th>Année</th>
+    <th>Groupe</th>
+    <th>Status</th>
+    <th class="snapright">Action</th>
+
+  </tr>
+  <tr *ngFor="let etudiant of etudiants">
+    <td>#</td>
+    <td>{{ etudiant.nom }}</td>
+    <td>{{ etudiant.prenom }}</td>
+    <td>{{ etudiant.dateNaissance | date }}</td>
+    <td>{{ etudiant.adresse?.wilaya }}</td>
+    <td>{{ etudiant.adresse?.ville }}</td>
+    <td>{{ etudiant.adresse?.rue }}</td>
+    <td>{{ etudiant.numeroTelephone }}</td>
+    <td>{{ etudiant.email }}</td>
+    <td>{{ etudiant.niveau }}</td>
+    <td>{{ etudiant.annee}}</td>
+    <td>{{ etudiant.groupe }}</td>
+    <td>{{etudiant.active}}</td>
+
+    <td class="snapright">
+      <button class="EditBtn" [routerLink]="['/admin/etuMod/', etudiant.id]" >Modifier</button>
+      <button class="DeleteBtn" (click)="supprimerEtudiant(etudiant.id,etudiant.role)">Supprimer</button>
+    </td>
+  </tr>
+</table>
+
+
+</div>
+</div>
