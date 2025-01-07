@@ -31,6 +31,7 @@
 ![image](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white)
 ![image](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![image](https://img.shields.io/badge/Java-FFE953?style=for-the-badge&logo=&logoColor=black)
+![image](https://img.shields.io/badge/SCSS-9558B2?style=for-the-badge&logo=&logoColor=white)
 
 
 
